@@ -1,9 +1,11 @@
 package com.slokam.automation.opencart.testscripts;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -22,5 +24,11 @@ public class TestCategories extends TestBase{
 		driver.findElement(By.xpath("//a[contains(text(),'Categories')]")).click();
 		String cat = driver.findElement(By.xpath("//form[@id='form-category']//tbody/tr/td[2]")).getText();
 		Assert.assertEquals(cat, "Cameras");
+		
+		List<WebElement> list = driver.findElements(By.xpath("//form[@id='form-category']//tbody/tr/td[2]"));
+		System.out.println(list.size());
+		for(WebElement w : list) {
+			System.out.println(w.getText());
+		}
 	}
 }
