@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pages.AdminOrdersPage;
+import com.slokam.automation.opencart.commons.pages.AdminReportsPage;
 
 public class TestOrders extends TestBase{
 
@@ -19,5 +20,6 @@ public class TestOrders extends TestBase{
 		AdminOrdersPage adminOrdersPage = new AdminOrdersPage(driver);
 		String orderTitle = adminOrdersPage.verifyTitle();
 		System.out.println(orderTitle);
+		
 	}
 }

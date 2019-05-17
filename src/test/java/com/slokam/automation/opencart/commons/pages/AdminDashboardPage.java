@@ -18,4 +18,9 @@ public class AdminDashboardPage {
 		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Categories')]")).click();
 	}
+	
+	public void clickOnStatistics() {
+		driver.findElement(By.xpath("//a[contains(text(),'Reports')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Statistics')]")).click();
+	}
 }
