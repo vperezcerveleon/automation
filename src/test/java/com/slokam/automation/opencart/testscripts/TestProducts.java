@@ -1,16 +1,15 @@
 package com.slokam.automation.opencart.testscripts;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
+import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
+import com.slokam.automation.opencart.commons.pages.AdminProductsPage;
+import com.slokam.automation.opencart.commons.utilites.AutomationUtils;
 
 public class TestProducts extends TestBase{
 
@@ -84,7 +83,7 @@ public class TestProducts extends TestBase{
 
 		driver.findElement(By.cssSelector(".fa-plus")).click();
 
-		String product = randomAlphaNumeric(5);
+		String product = AutomationUtils.randomAlphaNumeric(5);
 		String metaTag = product + "-tag";
 		String model = product + "- model";
 		driver.findElement(By.cssSelector("#input-name1")).sendKeys(product);
@@ -107,15 +106,21 @@ public class TestProducts extends TestBase{
 		System.out.println(message);
 	}
 
-	private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-	public static String randomAlphaNumeric(int count) {
-		StringBuilder builder = new StringBuilder();
-		while (count-- != 0) {
-			int character = (int) (Math.random() * ALPHA_NUMERIC_STRING.length());
-			builder.append(ALPHA_NUMERIC_STRING.charAt(character));
-		}
-		return builder.toString();
+	
+	
+	@Test
+	public void updateImageTest() {
+		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
+		adminLoginPage.login("user", "user123");
+		
+		AdminDashboardPage adminDashboardPage = new AdminDashboardPage(driver);
+		adminDashboardPage.clickOnProducts();
+		
+		AdminProductsPage adminProductsPage = new AdminProductsPage(driver);
+		adminProductsPage.editProduct("xyz");
+		adminProductsPage.updateImage("sad");
+		
+		
 	}
 
 }
