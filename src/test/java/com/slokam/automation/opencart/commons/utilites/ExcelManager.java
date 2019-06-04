@@ -88,14 +88,24 @@ public class ExcelManager {
 	
 	private String getCellData(Cell cell) {
 		String value = "";
-		if(cell.getCellType()==CellType.STRING) {
+		switch (cell.getCellType()) {
+		case STRING:
 			value  = cell.getStringCellValue();
-		}else if(cell.getCellType()==CellType.NUMERIC) {
-			value  = String.valueOf((int)cell.getNumericCellValue());
-		}else if(cell.getCellType()==CellType.BLANK) {
+			break;
+		case BLANK:
 			value  = "";
-		}else if(cell.getCellType()==CellType.BOOLEAN) {
+			break;
+			
+		case BOOLEAN:
 			value  = String.valueOf(cell.getBooleanCellValue());
+			break;
+			
+		case NUMERIC:
+			value  = String.valueOf((int)cell.getNumericCellValue());
+			break;
+
+		default:
+			break;
 		}
 		
 		return value;

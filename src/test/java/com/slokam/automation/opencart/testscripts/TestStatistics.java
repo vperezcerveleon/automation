@@ -6,6 +6,7 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.slokam.automation.opencart.commons.enums.Navigation;
 import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pages.AdminStatisticsPage;
@@ -19,7 +20,7 @@ public class TestStatistics extends TestBase{
 		adminLoginPage.login(username, password);
 		
 		AdminDashboardPage adminDashboardPage = new AdminDashboardPage(driver);
-		adminDashboardPage.clickOnStatistics();
+		adminDashboardPage.clickOnNavigationOption(Navigation.STATISTICS);
 		
 		AdminStatisticsPage adminStatisticsPage = new AdminStatisticsPage(driver);
 		List<String> actualTypes = adminStatisticsPage.getStatisticsTypes();
