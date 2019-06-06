@@ -31,5 +31,11 @@ public class AutoItExample {
 		
 		auto.controlSend("Save As", "", "[CLASS:Edit; INSTANCE:1]", "test.txt");
 		auto.controlClick("Save As", "", "[CLASS:Button; INSTANCE:2]");
-	}
+	
+		if(auto.winWait("Save As", "", 30)) {
+			
+		}else {
+			System.out.println("Window not present");
+		}
+		}
 }

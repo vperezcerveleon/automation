@@ -15,7 +15,7 @@ public class TestReviews extends TestBase{
 	
 	@Test
 	public void verifyReviews() {
-		login();
+		login(); 
 		String expected = "Dashboard";
 		String title = driver.getTitle();
 		Assert.assertEquals(title, expected);

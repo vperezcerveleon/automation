@@ -3,8 +3,12 @@ package com.slokam.automation.opencart.commons.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AdminDashboardPage {
+import com.slokam.automation.opencart.commons.enums.Navigation;
 
+public class AdminDashboardPage {
+	public static final String SALES="Sales";
+	public static final String REPORTS="Reports";
+	public static final String STATISTICS="Statistics";
 	WebDriver driver;
 	public AdminDashboardPage(WebDriver driver) {
 		this.driver = driver;
@@ -38,5 +42,16 @@ public class AdminDashboardPage {
 	public void clickOnProducts() {
 		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Products')]")).click();
+	}
+	
+	
+/*	public void clickOnNavigationOption(String item,String subItem) {
+		driver.findElement(By.xpath("//a[contains(text(),'"+item+"')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'"+subItem+"')]")).click();
+	}*/
+	
+	public void clickOnNavigationOption(Navigation navi) {
+		driver.findElement(By.xpath("//a[contains(text(),'"+navi.getItem()+"')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'"+navi.getSubItem()+"')]")).click();
 	}
 }

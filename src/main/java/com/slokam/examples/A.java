@@ -1,6 +1,6 @@
 package com.slokam.examples;
 
-public  class A {
+public class A {
 
 	int a = 20;
 	static int b = 30;
@@ -8,7 +8,7 @@ public  class A {
 	public static void test2() {
 		System.out.println("I am static method");
 	}
-	public  void test1() {
+	public void test1() {
 		b = a + b;
 		a = a + 20;
 	}
