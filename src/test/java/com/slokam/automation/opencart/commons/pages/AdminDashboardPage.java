@@ -34,5 +34,9 @@ public class AdminDashboardPage {
 		driver.findElement(By.xpath("//a[contains(text(),'Coupons')]")).click();
 	}
 
-	
+
+	public void clickOnProducts() {
+		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Products')]")).click();
+	}
 }
