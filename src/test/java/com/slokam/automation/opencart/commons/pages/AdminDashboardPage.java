@@ -27,7 +27,18 @@ public class AdminDashboardPage {
 		driver.findElement(By.xpath("//a[contains(text(),'Reports')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Statistics')]")).click();
 	}
-	
+
+	public void clickOnAttributes() {
+		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Attributes')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Attributes')]//li[2]")).click();
+	}
+	public void clickOnCoupons() {
+		driver.findElement(By.xpath("//a[contains(text(),'Marketing')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Coupons')]")).click();
+	}
+
+
 	public void clickOnProducts() {
 		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Products')]")).click();

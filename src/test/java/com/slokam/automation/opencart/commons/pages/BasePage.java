@@ -28,4 +28,14 @@ public class BasePage {
 			return false;
 		}
 	}
+	
+
+	public void sleep(int sec) {
+		try {
+			Thread.sleep(1000*sec);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
