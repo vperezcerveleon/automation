@@ -6,7 +6,11 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.slokam.automation.opencart.commons.listeners.CustomListener;
+
 
 public class Example1 {
 
