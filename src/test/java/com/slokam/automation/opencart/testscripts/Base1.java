@@ -16,7 +16,7 @@ public class Base1 {
 	public void launchBrowser() {
 		
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\java-jars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
 			driver = new ChromeDriver();
 
 		} else if (browser.equals("firefox")) {

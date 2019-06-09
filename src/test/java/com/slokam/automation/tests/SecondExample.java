@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 public class SecondExample {
 
 	public void test1() {
-		System.setProperty("webdriver.chrome.driver", "D:\\jars\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		// launch url

@@ -10,7 +10,7 @@ public class ExtSample {
 	@Test
 	public void test1() {
 		ChromeOptions chrome = new ChromeOptions();
-		System.setProperty("webdriver.chrome.driver", "D:\\jars\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
 		File file = new File("D:\\extension_12_5_20_1.crx");
 		chrome.addExtensions(file);
 		ChromeDriver driver = new ChromeDriver(chrome);
