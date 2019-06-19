@@ -14,13 +14,11 @@ pipeline {
 		stage("Checkout, Test & Publish") {
 			steps{
 				checkout scm
-				try{
+				
 				script{
 					bat(/mvn -Dmaven.test.failure.ignore clean  test /)
 				}
-				}catch(exc){
-					echo 'maven build failed.'
-				}
+				
 				step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])
 			}
 		}
