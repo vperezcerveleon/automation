@@ -3,12 +3,16 @@ package com.slokam.automation.tests;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Gmail {
 
 	public void test1() {
+		ChromeOptions options = new ChromeOptions();
+		//options.addArguments("user-data-dir=C:/Users/bkristip/AppData/Local/Google/Chrome/User Data");
+		options.addArguments("--incognito");
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		// launch url
 		driver.get("https://gmail.com/");
