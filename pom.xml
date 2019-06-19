@@ -10,6 +10,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<suite>testng.xml</suite>
 	</properties>
 
 	<dependencies>
@@ -79,7 +80,31 @@
 
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<property>
+					<name>suite</name>
+					<value>testng.xml</value>
+				</property>
+			</activation>
+		</profile>
+		<profile>
+			<id>custom</id>
+			<activation>
+				<property>
+					<name>suite</name>
+					<value>!testng.xml</value>
+				</property>
+			</activation>
+			<properties>
+				<suite.name>${suite}</suite.name>
+			</properties>
+		</profile>
+		
 
+	</profiles>
 
 	<build>
 		<plugins>
@@ -89,7 +114,7 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>singlecase.xml</suiteXmlFile>
+						<suiteXmlFile>${suite.name}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
