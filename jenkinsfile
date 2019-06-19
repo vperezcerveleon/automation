@@ -18,8 +18,8 @@ pipeline {
 				script{
 					bat(/mvn -Dmaven.test.failure.ignore clean  test /)
 				}
-				}catch{
-				
+				}catch(exc){
+					echo 'maven build failed.'
 				}
 				step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])
 			}
