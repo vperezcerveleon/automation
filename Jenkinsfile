@@ -16,7 +16,7 @@ pipeline {
 				checkout scm
 				try{
 				script{
-					bat(/mvn clean test -Dmaven.test.failure.ignore/)
+					bat(/mvn -Dmaven.test.failure.ignore clean  test /)
 				}
 				}catch{
 				
