@@ -1,6 +1,5 @@
 package com.slokam.automation.tests;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,9 +19,10 @@ public class Tsrtc {
 		WebElement element = driver.findElement(By.xpath("//a[@href='/oprs-web/ticket/waitlist.do']"));
 		element.click();
 		String newUrl = driver.getCurrentUrl();
-		WebDriver newDriver = driver.switchTo().newWindow(WindowType.WINDOW);
+		WebDriver newDriver = driver.switchTo().newWindow(WindowType.TAB);
 		newDriver.get(newUrl);
-		
+		WebDriver newDriver1 = driver.switchTo().newWindow(WindowType.WINDOW);
+		newDriver1.get(newUrl);
 		/*
 		driver.findElement(By.id("id")).sendKeys("1233");
 		driver.findElement(By.id("mobileNo")).sendKeys("1231231231");

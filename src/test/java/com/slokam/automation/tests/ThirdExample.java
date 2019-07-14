@@ -38,7 +38,7 @@ public class ThirdExample {
 			file = ((ChromeDriver)driver).getScreenshotAs(OutputType.FILE);
 		}
 		
-		File file2 = new File("D:\\sample2.jpeg");
+		File file2 = new File("D:\\sample.jpeg");
 		try {
 			FileUtils.copyFile(file, file2);
 		} catch (IOException e) {
