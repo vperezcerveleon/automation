@@ -16,7 +16,7 @@ pipeline {
 				checkout scm
 				
 				script{
-					bat(/mvn -Dmaven.test.failure.ignore clean  test /)
+					bat(/mvn clean  test /)
 				}
 				
 				step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])

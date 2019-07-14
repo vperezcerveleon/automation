@@ -10,15 +10,14 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class JQueryUI {
@@ -28,20 +27,20 @@ public class JQueryUI {
 	
 		URL hubUrl= null;
 		try {
-			hubUrl = new URL("http://localhost:4444/wd/hub");
+			hubUrl = new URL("http://bkristip-in.in.oracle.com:4444");
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
-		Capabilities cap = DesiredCapabilities.chrome();
-		
+		Capabilities cap = new DesiredCapabilities("chrome","75",Platform.WIN10);
 		WebDriver driver = new RemoteWebDriver(hubUrl,cap);
 		
 		driver.manage().window().maximize();
 		// launch url
 		driver.get("https://jqueryui.com/");
 		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.findElement(By.xpath("//a[text()='Droppable']")).click();
@@ -66,22 +65,22 @@ public class JQueryUI {
 			e.printStackTrace();
 		}
 		driver.quit();
-
+		
 	}
 	
 	@Test
 	public void test2() {
 		URL hubUrl= null;
 		try {
-			hubUrl = new URL("http://localhost:4444/wd/hub");
+			hubUrl = new URL("http://bkristip-in.in.oracle.com:4444");
 		} catch (MalformedURLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
-		Capabilities cap = DesiredCapabilities.chrome();
+		ChromeOptions options  = new ChromeOptions();
 		
-		WebDriver driver = new RemoteWebDriver(hubUrl,cap);
+		WebDriver driver = new RemoteWebDriver(hubUrl,options);
 		driver.manage().window().maximize();
 		// launch url
 		driver.get("https://jqueryui.com/");

@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -14,14 +15,15 @@ public class Tsrtc {
 	public void test1() {
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
-		/*System.setProperty("webdriver.gecko.driver", "D:\\jars\\geckodriver.exe");
-		FirefoxDriver driver = new FirefoxDriver();*/
-		// launch url
+	
 		driver.get(url);
 		WebElement element = driver.findElement(By.xpath("//a[@href='/oprs-web/ticket/waitlist.do']"));
 		element.click();
+		String newUrl = driver.getCurrentUrl();
+		WebDriver newDriver = driver.switchTo().newWindow(WindowType.WINDOW);
+		newDriver.get(newUrl);
 		
+		/*
 		driver.findElement(By.id("id")).sendKeys("1233");
 		driver.findElement(By.id("mobileNo")).sendKeys("1231231231");
 		driver.findElement(By.id("searchBtn")).click();
@@ -37,7 +39,9 @@ public class Tsrtc {
 		driver.findElement(By.id("searchBtn")).click();
 		String text = driver.findElement(By.id("errorMsg")).getText();
 		System.out.println(text);
-		driver.quit();
+		
+		
+		driver.quit();*/
 	}
 	
 	
