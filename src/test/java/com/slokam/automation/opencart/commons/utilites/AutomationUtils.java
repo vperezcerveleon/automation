@@ -21,4 +21,10 @@ public class AutomationUtils {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void main(String[] args) {
+		
+		String st = AutomationUtils.randomAlphaNumeric(5);
+		System.out.println(st);
+	}
 }

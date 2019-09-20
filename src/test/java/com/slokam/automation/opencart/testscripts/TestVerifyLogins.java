@@ -48,7 +48,7 @@ public class TestVerifyLogins extends TestBase{
 		Assert.assertEquals(actual, isLogedIn);
 	}
 	
-	@Test(dataProvider="excelDTO")
+	//@Test(dataProvider="excelDTO")
 	public void verifyLogin(UserLoginDTO dto) {
 		
 		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);

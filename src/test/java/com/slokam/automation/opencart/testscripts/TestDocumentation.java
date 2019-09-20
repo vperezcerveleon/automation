@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class TestDocumentation extends TestBase{
 
-	//@Test
+	@Test
 	public void verifyDocumentHeading() {
 		
 		login();
@@ -30,7 +30,7 @@ public class TestDocumentation extends TestBase{
 		System.out.println(st);
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void verifyDocumentHeadingInMultipleWindow() {
 		
 		login();

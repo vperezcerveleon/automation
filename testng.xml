@@ -1,12 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="CT3" verbose="1">
-	<listeners>
-		<listener class-name="com.slokam.automation.opencart.commons.listeners.CustomListener"></listener>
-	</listeners>
 	<test name="basic">
-		<packages>
-			<package name="com.slokam.automation.tests.sample1"></package>
-			<package name="com.slokam.automation.tests.sample2"></package>
-		</packages>
+		<!-- <packages>
+			<package name="com.slokam.automation.opencart.testscripts"></package>
+		</packages> -->
+		<classes>
+			<class name="com.slokam.automation.opencart.testscripts.TestProducts"></class>
+		</classes>
 	</test>
 </suite>

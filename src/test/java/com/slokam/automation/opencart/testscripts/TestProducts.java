@@ -70,16 +70,8 @@ public class TestProducts extends TestBase{
 	@Test
 	public void verifyCreateProduct() {
 		login();
-		String title = driver.getTitle();
-		System.out.println(title);
-
-		// click catalog
-
 		driver.findElement(By.xpath("//a[contains(text(),'Catalog')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Products')]")).click();
-
-		title = driver.getTitle();
-		System.out.println(title);
 
 		driver.findElement(By.cssSelector(".fa-plus")).click();
 
