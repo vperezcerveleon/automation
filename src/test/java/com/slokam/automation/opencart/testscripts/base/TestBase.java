@@ -1,4 +1,4 @@
-package com.slokam.automation.opencart.testscripts;
+package com.slokam.automation.opencart.testscripts.base;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,12 +16,12 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-	String browser = "chrome";
-	String url = "https://demo.opencart.com/admin/";
-	String username = "user";
-	String password = "user123";
-	WebDriver driver = null;
-	boolean grid = false;
+	public String browser = "chrome";
+	public String url = "https://demo.opencart.com/admin/";
+	public String username = "user";
+	public String password = "user123";
+	public WebDriver driver = null;
+	public boolean grid = false;
 
 	@BeforeMethod
 	public void launchBrowser() {

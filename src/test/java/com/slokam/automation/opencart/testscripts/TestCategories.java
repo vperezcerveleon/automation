@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.slokam.automation.opencart.testscripts.base.TestBase;
+
 public class TestCategories extends TestBase{
 
 	@Test(groups= {"regression"})

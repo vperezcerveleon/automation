@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.slokam.automation.opencart.testscripts.TestBase;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class AdminReportsPage {
 	WebDriver driver;

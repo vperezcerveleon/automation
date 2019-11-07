@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.slokam.automation.opencart.commons.pages.AdminCouponsPage;
 import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class TestCoupons extends TestBase {
 	

@@ -10,6 +10,7 @@ import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pages.AdminProductsPage;
 import com.slokam.automation.opencart.commons.utilites.AutomationUtils;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class TestProducts extends TestBase{
 

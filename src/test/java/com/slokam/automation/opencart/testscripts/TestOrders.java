@@ -6,6 +6,7 @@ import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pages.AdminOrdersPage;
 import com.slokam.automation.opencart.commons.pages.AdminReportsPage;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class TestOrders extends TestBase{
 

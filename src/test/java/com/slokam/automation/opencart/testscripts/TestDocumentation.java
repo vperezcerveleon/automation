@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import com.slokam.automation.opencart.testscripts.base.TestBase;
+
 public class TestDocumentation extends TestBase{
 
 	@Test

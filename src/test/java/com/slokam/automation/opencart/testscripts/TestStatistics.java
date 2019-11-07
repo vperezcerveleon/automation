@@ -11,6 +11,7 @@ import com.slokam.automation.opencart.commons.pages.AdminDashboardPage;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pages.AdminStatisticsPage;
 import com.slokam.automation.opencart.commons.utilites.DataManager;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class TestStatistics extends TestBase{
 

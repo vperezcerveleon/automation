@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.slokam.automation.opencart.testscripts.base.TestBase;
+
 public class TestReviews extends TestBase{
 
 	

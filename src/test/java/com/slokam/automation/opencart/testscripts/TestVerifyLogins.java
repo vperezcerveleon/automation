@@ -11,11 +11,12 @@ import org.testng.annotations.Test;
 import com.slokam.automation.opencart.commons.pages.AdminLoginPage;
 import com.slokam.automation.opencart.commons.pojo.UserLoginDTO;
 import com.slokam.automation.opencart.commons.utilites.ExcelManager;
+import com.slokam.automation.opencart.testscripts.base.TestBase;
 
 public class TestVerifyLogins extends TestBase{
 
 	
-	//@Test
+	@Test
 	public void test1() {
 		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
 		String username = "u1";
@@ -27,7 +28,7 @@ public class TestVerifyLogins extends TestBase{
 		
 	}
 	
-	//@Test
+	@Test
 	public void test2() {
 		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
 		String username = "user";
@@ -48,7 +49,7 @@ public class TestVerifyLogins extends TestBase{
 		Assert.assertEquals(actual, isLogedIn);
 	}
 	
-	//@Test(dataProvider="excelDTO")
+	@Test(dataProvider="excelDTO")
 	public void verifyLogin(UserLoginDTO dto) {
 		
 		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
