@@ -9,3 +9,6 @@ Topics discussed:
 
 Selenium
 Java
+
+TestNG
+Maven
