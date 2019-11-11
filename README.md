@@ -12,3 +12,5 @@ Java
 
 TestNG
 Maven
+Need to discuss:
+Webservices Testing
