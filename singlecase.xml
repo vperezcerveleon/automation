@@ -5,5 +5,5 @@
 		<classes>
 			<class name="com.slokam.automation.tests.Tsrtc"></class>
 		</classes>
-	</test>
+	</test> 
 </suite>
