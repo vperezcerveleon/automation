@@ -1,6 +1,7 @@
 package com.slokam.automation.opencart.testscripts;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
 
@@ -22,6 +23,6 @@ public class TestAttributes extends TestBase{
 		AdminStatisticsPage adminStatisticsPage=new AdminStatisticsPage(driver);
 		adminStatisticsPage.getStatisticsTypes();
 		
-		
+		driver.manage().timeouts().setScriptTimeout(19, TimeUnit.SECONDS);
 	}
 }
