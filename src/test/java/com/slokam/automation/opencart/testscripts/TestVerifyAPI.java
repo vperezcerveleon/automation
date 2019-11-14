@@ -10,4 +10,9 @@ public class TestVerifyAPI extends TestBase{
 	public void test1() {
 		System.out.println("test1");
 	}
+	
+	@Test
+	public void test3() {
+		System.out.println("I am test3");
+	}
 }
