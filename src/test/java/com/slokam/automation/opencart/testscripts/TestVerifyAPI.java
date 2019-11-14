@@ -12,10 +12,16 @@ public class TestVerifyAPI extends TestBase{
 		System.out.println("test1");
 	}
 	
+
 	
 	@Test
 	public void verifyAPIStatus() {
 		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
 		adminLoginPage.login("sdf", "sdfds");
+	}
+	
+	@Test
+	public void test3() {
+		System.out.println("I am test3");
 	}
 }
