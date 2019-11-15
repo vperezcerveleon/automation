@@ -12,7 +12,6 @@ public class TestVerifyAPI extends TestBase{
 		System.out.println("test1");
 	}
 	
-
 	
 	@Test
 	public void verifyAPIStatus() {
@@ -23,5 +22,10 @@ public class TestVerifyAPI extends TestBase{
 	@Test
 	public void test3() {
 		System.out.println("I am test3");
+	}
+	
+	@Test
+	public void test4() {
+		System.out.println("I am test4");
 	}
 }
