@@ -9,7 +9,9 @@ pipeline {
 	
 	stages{
 		stage("Checkout, Test & Publish") {
-			//
+			steps{
+				bat 'echo "hello"'
+			}
 		}
 		
 		stage("Email"){
