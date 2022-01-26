@@ -14,11 +14,7 @@ pipeline {
 			}
 		}
 		
-		stage("Email"){
-			steps{
-				emailext (to: 'jorgesebastiancuevasromero@gmail.com', replyTo: 'jorgesebastiancuevasromero@gmail.com', subject: "Email Report from - ${env.JOB_NAME} ${env.BUILD_NUMBER}", body: "Email Report from - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)");
-			}
-		}
+		
 	}
 	
   
