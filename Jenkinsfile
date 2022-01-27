@@ -32,7 +32,7 @@ pipeline {
                 subject: "Example Build: ${env.JOB_NAME} - Success", 
                 body: "Job Success - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}");
 		
-		        slackSend failOnError: true, color: "#b73732", message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+		        slackSend failOnError: false, color: "#b73732", message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 
          } 
     }
